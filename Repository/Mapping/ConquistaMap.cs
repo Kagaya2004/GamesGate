@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,13 @@ namespace Repository.Mapping
 {
     public class ConquistaMap : IEntityTypeConfiguration<Conquista>
     {
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Conquista> builder)
+        public void Configure(EntityTypeBuilder<Conquista> builder)
         {
-            builder.ToTable("Conquistas");
+            builder.ToTable("Conquista");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Descricao)
                 .IsRequired();
-            builder.HasOne(x => x.Jogo)
-                .WithMany()
-                .HasConstraintName("FK_Jogo");
+            builder.HasOne(x => x.Jogo);
         }
     }
 }

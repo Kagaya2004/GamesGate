@@ -9,10 +9,9 @@ namespace Domain.Entities
 
         }
 
-        public Jogo(int id, string nome, string descricao,
-            DateTime dataLancamento, Desenvolvedora? desenvolvedora)
+        public Jogo(int id, string? nome, string? descricao,
+            DateTime dataLancamento, Desenvolvedora? desenvolvedora) : base(id)
         {
-            Id = id;
             Nome = nome;
             Descricao = descricao;
             DataLancamento = dataLancamento;
@@ -21,7 +20,7 @@ namespace Domain.Entities
 
         public string? Nome { get; set; }
         public string? Descricao { get; set; }
-        public DateTime? DataLancamento { get; set; }
-        public virtual Desenvolvedora? Desenvolvedora { get; set; }
+        public DateTime DataLancamento { get; set; }
+        public Desenvolvedora? Desenvolvedora { get; set; }
     }
 }

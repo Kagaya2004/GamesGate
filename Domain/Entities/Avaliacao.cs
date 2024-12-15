@@ -15,9 +15,8 @@ namespace Domain.Entities
         }
 
         public Avaliacao(int id, Jogo? jogo, Usuario? usuario,
-            string comentario, DateTime dataComentario, double classificacao)
+            string comentario, DateTime dataComentario, float classificacao) : base(id)
         {
-            Id = id;
             Jogo = jogo;
             Usuario = usuario;
             Comentario = comentario;
@@ -28,7 +27,7 @@ namespace Domain.Entities
         public virtual Jogo? Jogo { get; set; }
         public virtual Usuario? Usuario { get; set; }
         public string? Comentario { get; set; }
-        public DateTime? DataComentario { get; set; }
-        public double? Classificacao { get; set; }
+        public DateTime DataComentario { get; set; }
+        public float? Classificacao { get; set; }
     }
 }

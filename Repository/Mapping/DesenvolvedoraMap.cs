@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace Repository.Mapping
 {
     public class DesenvolvedoraMap : IEntityTypeConfiguration<Desenvolvedora>
     {
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Desenvolvedora> builder)
+        public void Configure(EntityTypeBuilder<Desenvolvedora> builder)
         {
-            builder.ToTable("Desenvolvedoras");
+            builder.ToTable("Desenvolvedora");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome)
                 .IsRequired();

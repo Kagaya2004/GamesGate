@@ -33,12 +33,12 @@
             tbNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tbLogin = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tbEmail = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            tbDescricao = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             cbxStatus = new ReaLTaiizor.Controls.MaterialComboBox();
             tbSenha = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             tbDataLogin = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             tbDataCriacao = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
             tbDataNascimento = new ReaLTaiizor.Controls.MaterialMaskedTextBox();
+            tbDescricao = new ReaLTaiizor.Controls.MaterialMultiLineTextBoxEdit();
             tabControl.SuspendLayout();
             tabPageCadastro.SuspendLayout();
             tabPageConsulta.SuspendLayout();
@@ -50,12 +50,12 @@
             // 
             // tabPageCadastro
             // 
+            tabPageCadastro.Controls.Add(tbDescricao);
             tabPageCadastro.Controls.Add(tbDataNascimento);
             tabPageCadastro.Controls.Add(tbDataLogin);
             tabPageCadastro.Controls.Add(tbDataCriacao);
             tabPageCadastro.Controls.Add(tbSenha);
             tabPageCadastro.Controls.Add(cbxStatus);
-            tabPageCadastro.Controls.Add(tbDescricao);
             tabPageCadastro.Controls.Add(tbEmail);
             tabPageCadastro.Controls.Add(tbLogin);
             tabPageCadastro.Controls.Add(tbNome);
@@ -65,7 +65,6 @@
             tabPageCadastro.Controls.SetChildIndex(tbNome, 0);
             tabPageCadastro.Controls.SetChildIndex(tbLogin, 0);
             tabPageCadastro.Controls.SetChildIndex(tbEmail, 0);
-            tabPageCadastro.Controls.SetChildIndex(tbDescricao, 0);
             tabPageCadastro.Controls.SetChildIndex(cbxStatus, 0);
             tabPageCadastro.Controls.SetChildIndex(tbSenha, 0);
             tabPageCadastro.Controls.SetChildIndex(tbDataCriacao, 0);
@@ -73,14 +72,17 @@
             tabPageCadastro.Controls.SetChildIndex(btnSalvar, 0);
             tabPageCadastro.Controls.SetChildIndex(btnCancelar, 0);
             tabPageCadastro.Controls.SetChildIndex(tbDataNascimento, 0);
+            tabPageCadastro.Controls.SetChildIndex(tbDescricao, 0);
             // 
             // btnCancelar
             // 
             btnCancelar.Location = new Point(515, 308);
+            btnCancelar.TabIndex = 11;
             // 
             // btnSalvar
             // 
             btnSalvar.Location = new Point(632, 308);
+            btnSalvar.TabIndex = 10;
             // 
             // btnNovo
             // 
@@ -110,7 +112,7 @@
             tbId.HideSelection = true;
             tbId.Hint = "ID";
             tbId.LeadingIcon = null;
-            tbId.Location = new Point(28, 28);
+            tbId.Location = new Point(28, 15);
             tbId.MaxLength = 32767;
             tbId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             tbId.Name = "tbId";
@@ -123,7 +125,7 @@
             tbId.SelectionStart = 0;
             tbId.ShortcutsEnabled = true;
             tbId.Size = new Size(88, 48);
-            tbId.TabIndex = 2;
+            tbId.TabIndex = 0;
             tbId.TabStop = false;
             tbId.TextAlign = HorizontalAlignment.Left;
             tbId.TrailingIcon = null;
@@ -141,7 +143,7 @@
             tbNome.HideSelection = true;
             tbNome.Hint = "Nome";
             tbNome.LeadingIcon = null;
-            tbNome.Location = new Point(28, 94);
+            tbNome.Location = new Point(28, 79);
             tbNome.MaxLength = 32767;
             tbNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             tbNome.Name = "tbNome";
@@ -154,7 +156,7 @@
             tbNome.SelectionStart = 0;
             tbNome.ShortcutsEnabled = true;
             tbNome.Size = new Size(305, 48);
-            tbNome.TabIndex = 3;
+            tbNome.TabIndex = 5;
             tbNome.TabStop = false;
             tbNome.TextAlign = HorizontalAlignment.Left;
             tbNome.TrailingIcon = null;
@@ -172,7 +174,7 @@
             tbLogin.HideSelection = true;
             tbLogin.Hint = "Login";
             tbLogin.LeadingIcon = null;
-            tbLogin.Location = new Point(358, 94);
+            tbLogin.Location = new Point(358, 79);
             tbLogin.MaxLength = 32767;
             tbLogin.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             tbLogin.Name = "tbLogin";
@@ -185,7 +187,7 @@
             tbLogin.SelectionStart = 0;
             tbLogin.ShortcutsEnabled = true;
             tbLogin.Size = new Size(346, 48);
-            tbLogin.TabIndex = 4;
+            tbLogin.TabIndex = 6;
             tbLogin.TabStop = false;
             tbLogin.TextAlign = HorizontalAlignment.Left;
             tbLogin.TrailingIcon = null;
@@ -203,7 +205,7 @@
             tbEmail.HideSelection = true;
             tbEmail.Hint = "Email";
             tbEmail.LeadingIcon = null;
-            tbEmail.Location = new Point(28, 164);
+            tbEmail.Location = new Point(28, 143);
             tbEmail.MaxLength = 32767;
             tbEmail.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             tbEmail.Name = "tbEmail";
@@ -216,42 +218,11 @@
             tbEmail.SelectionStart = 0;
             tbEmail.ShortcutsEnabled = true;
             tbEmail.Size = new Size(305, 48);
-            tbEmail.TabIndex = 5;
+            tbEmail.TabIndex = 7;
             tbEmail.TabStop = false;
             tbEmail.TextAlign = HorizontalAlignment.Left;
             tbEmail.TrailingIcon = null;
             tbEmail.UseSystemPasswordChar = false;
-            // 
-            // tbDescricao
-            // 
-            tbDescricao.AnimateReadOnly = false;
-            tbDescricao.AutoCompleteMode = AutoCompleteMode.None;
-            tbDescricao.AutoCompleteSource = AutoCompleteSource.None;
-            tbDescricao.BackgroundImageLayout = ImageLayout.None;
-            tbDescricao.CharacterCasing = CharacterCasing.Normal;
-            tbDescricao.Depth = 0;
-            tbDescricao.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            tbDescricao.HideSelection = true;
-            tbDescricao.Hint = "Descrição";
-            tbDescricao.LeadingIcon = null;
-            tbDescricao.Location = new Point(28, 232);
-            tbDescricao.MaxLength = 32767;
-            tbDescricao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            tbDescricao.Name = "tbDescricao";
-            tbDescricao.PasswordChar = '\0';
-            tbDescricao.PrefixSuffixText = null;
-            tbDescricao.ReadOnly = false;
-            tbDescricao.RightToLeft = RightToLeft.No;
-            tbDescricao.SelectedText = "";
-            tbDescricao.SelectionLength = 0;
-            tbDescricao.SelectionStart = 0;
-            tbDescricao.ShortcutsEnabled = true;
-            tbDescricao.Size = new Size(676, 48);
-            tbDescricao.TabIndex = 9;
-            tbDescricao.TabStop = false;
-            tbDescricao.TextAlign = HorizontalAlignment.Left;
-            tbDescricao.TrailingIcon = null;
-            tbDescricao.UseSystemPasswordChar = false;
             // 
             // cbxStatus
             // 
@@ -269,13 +240,13 @@
             cbxStatus.IntegralHeight = false;
             cbxStatus.ItemHeight = 43;
             cbxStatus.Items.AddRange(new object[] { "Ativo", "Inativo" });
-            cbxStatus.Location = new Point(575, 28);
+            cbxStatus.Location = new Point(583, 15);
             cbxStatus.MaxDropDownItems = 4;
             cbxStatus.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cbxStatus.Name = "cbxStatus";
             cbxStatus.Size = new Size(124, 49);
             cbxStatus.StartIndex = 0;
-            cbxStatus.TabIndex = 10;
+            cbxStatus.TabIndex = 4;
             // 
             // tbSenha
             // 
@@ -292,7 +263,7 @@
             tbSenha.Hint = "Senha";
             tbSenha.InsertKeyMode = InsertKeyMode.Default;
             tbSenha.LeadingIcon = (Image)resources.GetObject("tbSenha.LeadingIcon");
-            tbSenha.Location = new Point(358, 164);
+            tbSenha.Location = new Point(358, 145);
             tbSenha.Mask = "";
             tbSenha.MaxLength = 32767;
             tbSenha.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -311,7 +282,7 @@
             tbSenha.ShortcutsEnabled = true;
             tbSenha.Size = new Size(346, 48);
             tbSenha.SkipLiterals = true;
-            tbSenha.TabIndex = 11;
+            tbSenha.TabIndex = 8;
             tbSenha.TabStop = false;
             tbSenha.TextAlign = HorizontalAlignment.Left;
             tbSenha.TextMaskFormat = MaskFormat.IncludeLiterals;
@@ -334,7 +305,7 @@
             tbDataLogin.Hint = "Data de Login";
             tbDataLogin.InsertKeyMode = InsertKeyMode.Default;
             tbDataLogin.LeadingIcon = null;
-            tbDataLogin.Location = new Point(443, 28);
+            tbDataLogin.Location = new Point(449, 15);
             tbDataLogin.Mask = "99/99/9999";
             tbDataLogin.MaxLength = 32767;
             tbDataLogin.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -353,7 +324,7 @@
             tbDataLogin.ShortcutsEnabled = true;
             tbDataLogin.Size = new Size(114, 48);
             tbDataLogin.SkipLiterals = true;
-            tbDataLogin.TabIndex = 13;
+            tbDataLogin.TabIndex = 3;
             tbDataLogin.TabStop = false;
             tbDataLogin.Text = "  /  /";
             tbDataLogin.TextAlign = HorizontalAlignment.Left;
@@ -377,7 +348,7 @@
             tbDataCriacao.Hint = "Data de Criação";
             tbDataCriacao.InsertKeyMode = InsertKeyMode.Default;
             tbDataCriacao.LeadingIcon = null;
-            tbDataCriacao.Location = new Point(297, 28);
+            tbDataCriacao.Location = new Point(301, 15);
             tbDataCriacao.Mask = "99/99/9999";
             tbDataCriacao.MaxLength = 32767;
             tbDataCriacao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -396,7 +367,7 @@
             tbDataCriacao.ShortcutsEnabled = true;
             tbDataCriacao.Size = new Size(128, 48);
             tbDataCriacao.SkipLiterals = true;
-            tbDataCriacao.TabIndex = 12;
+            tbDataCriacao.TabIndex = 2;
             tbDataCriacao.TabStop = false;
             tbDataCriacao.Text = "  /  /";
             tbDataCriacao.TextAlign = HorizontalAlignment.Left;
@@ -420,7 +391,7 @@
             tbDataNascimento.Hint = "Data de Nascimento";
             tbDataNascimento.InsertKeyMode = InsertKeyMode.Default;
             tbDataNascimento.LeadingIcon = null;
-            tbDataNascimento.Location = new Point(134, 28);
+            tbDataNascimento.Location = new Point(136, 15);
             tbDataNascimento.Mask = "99/99/9999";
             tbDataNascimento.MaxLength = 32767;
             tbDataNascimento.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
@@ -439,7 +410,7 @@
             tbDataNascimento.ShortcutsEnabled = true;
             tbDataNascimento.Size = new Size(145, 48);
             tbDataNascimento.SkipLiterals = true;
-            tbDataNascimento.TabIndex = 14;
+            tbDataNascimento.TabIndex = 1;
             tbDataNascimento.TabStop = false;
             tbDataNascimento.Text = "  /  /";
             tbDataNascimento.TextAlign = HorizontalAlignment.Left;
@@ -447,6 +418,31 @@
             tbDataNascimento.TrailingIcon = null;
             tbDataNascimento.UseSystemPasswordChar = false;
             tbDataNascimento.ValidatingType = null;
+            // 
+            // tbDescricao
+            // 
+            tbDescricao.AnimateReadOnly = false;
+            tbDescricao.BackgroundImageLayout = ImageLayout.None;
+            tbDescricao.CharacterCasing = CharacterCasing.Normal;
+            tbDescricao.Depth = 0;
+            tbDescricao.HideSelection = true;
+            tbDescricao.Hint = "Descrição";
+            tbDescricao.Location = new Point(29, 207);
+            tbDescricao.MaxLength = 32767;
+            tbDescricao.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            tbDescricao.Name = "tbDescricao";
+            tbDescricao.PasswordChar = '\0';
+            tbDescricao.ReadOnly = false;
+            tbDescricao.ScrollBars = ScrollBars.None;
+            tbDescricao.SelectedText = "";
+            tbDescricao.SelectionLength = 0;
+            tbDescricao.SelectionStart = 0;
+            tbDescricao.ShortcutsEnabled = true;
+            tbDescricao.Size = new Size(675, 91);
+            tbDescricao.TabIndex = 9;
+            tbDescricao.TabStop = false;
+            tbDescricao.TextAlign = HorizontalAlignment.Left;
+            tbDescricao.UseSystemPasswordChar = false;
             // 
             // CadastroUsuario
             // 
@@ -468,14 +464,13 @@
 
         private ReaLTaiizor.Controls.MaterialTextBoxEdit tbNome;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit tbId;
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit tbDescricao;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit tbEmail;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit tbLogin;
         private ReaLTaiizor.Controls.MaterialComboBox cbxStatus;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox tbSenha;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox tbDataLogin;
-        private ReaLTaiizor.Controls.MaterialMaskedTextBox tbDataCadastro;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox tbDataNascimento;
         private ReaLTaiizor.Controls.MaterialMaskedTextBox tbDataCriacao;
+        private ReaLTaiizor.Controls.MaterialMultiLineTextBoxEdit tbDescricao;
     }
 }

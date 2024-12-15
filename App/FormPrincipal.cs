@@ -4,16 +4,6 @@ using App.Outros;
 using Domain.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using ReaLTaiizor.Forms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App
 {
@@ -99,11 +89,23 @@ namespace App
             ExibeFormulario<CadastroJogo>();
         }
 
+        private void jogoGeneroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroJogoGenero>();
+        }
+
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ExibeFormulario<CadastroUsuario>();
         }
 
+        private void trocarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarregaLogin();
+        }
+
         #endregion
+
+        
     }
 }

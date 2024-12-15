@@ -37,6 +37,7 @@ namespace App.Infra
             #region Repositórios
             Services.AddScoped<IBaseRepository<Avaliacao>, BaseRepository<Avaliacao>>();
             Services.AddScoped<IBaseRepository<Biblioteca>, BaseRepository<Biblioteca>>();
+            Services.AddScoped<IBaseRepository<BibliotecaItem>, BaseRepository<BibliotecaItem>>();
             Services.AddScoped<IBaseRepository<Conquista>, BaseRepository<Conquista>>();
             Services.AddScoped<IBaseRepository<Desenvolvedora>, BaseRepository<Desenvolvedora>>();
             Services.AddScoped<IBaseRepository<Genero>, BaseRepository<Genero>>();
@@ -48,6 +49,7 @@ namespace App.Infra
             #region Serviços
             Services.AddScoped<IBaseService<Avaliacao>, BaseService<Avaliacao>>();
             Services.AddScoped<IBaseService<Biblioteca>, BaseService<Biblioteca>>();
+            Services.AddScoped<IBaseService<BibliotecaItem>, BaseService<BibliotecaItem>>();
             Services.AddScoped<IBaseService<Conquista>, BaseService<Conquista>>();
             Services.AddScoped<IBaseService<Desenvolvedora>, BaseService<Desenvolvedora>>();
             Services.AddScoped<IBaseService<Genero>, BaseService<Genero>>();
@@ -71,9 +73,12 @@ namespace App.Infra
             #region Mappings
             Services.AddSingleton(new MapperConfiguration(config =>
             {
+                config.CreateMap<Usuario, UsuarioModel>();
                 config.CreateMap<Avaliacao, AvaliacaoModel>()
                     .ForMember(d => d.IdJogo, d => d.MapFrom(x => x.Jogo!.Id))
-                    .ForMember(d => d.Jogo, d => d.MapFrom(x => x.Jogo!.Nome));
+                    .ForMember(d => d.Jogo, d => d.MapFrom(x => x.Jogo!.Nome))
+                    .ForMember(d => d.IdUsuario, d => d.MapFrom(x => x.Usuario!.Id))
+                    .ForMember(d => d.Usuario, d => d.MapFrom(x => x.Usuario!.Nome));
                 config.CreateMap<Biblioteca, BibliotecaModel>()
                     .ForMember(d => d.IdUsuario, d => d.MapFrom(x => x.Usuario!.Id))
                     .ForMember(d => d.Usuario, d => d.MapFrom(x => x.Usuario!.Nome));
@@ -92,8 +97,7 @@ namespace App.Infra
                     .ForMember(d => d.IdGenero, d => d.MapFrom(x => x.Genero!.Id))
                     .ForMember(d => d.Genero, d => d.MapFrom(x => x.Genero!.Nome))
                     .ForMember(d => d.IdJogo, d => d.MapFrom(x => x.Jogo!.Id))
-                    .ForMember(d => d.Jogo, d => d.MapFrom(x => x.Jogo!.Nome));
-                config.CreateMap<Usuario, UsuarioModel>();
+                    .ForMember(d => d.Jogo, d => d.MapFrom(x => x.Jogo!.Nome));                    
             }).CreateMapper());
             #endregion
 

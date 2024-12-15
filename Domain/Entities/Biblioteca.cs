@@ -17,7 +17,6 @@ namespace Domain.Entities
 
         public Biblioteca(int id, List<BibliotecaItem> listaJogos, Usuario? usuario) : base(id)
         {
-            Id = id;
             Usuario = usuario;
             ListaJogos = listaJogos;
         }
@@ -33,16 +32,15 @@ namespace Domain.Entities
 
         }
 
-        public BibliotecaItem(int id, Jogo jogo, double horasJogadas, Biblioteca biblioteca)
+        public BibliotecaItem(int id, Jogo jogo, float horasJogadas, Biblioteca biblioteca) : base(id)
         {
-            Id = id;
             Jogo = jogo;
             HorasJogadas = horasJogadas;
             Biblioteca = biblioteca;
         }
 
         public virtual Jogo? Jogo{ get; set; }
-        public double HorasJogadas {  get; set; }
+        public float HorasJogadas {  get; set; }
         [JsonIgnore]
         public virtual Biblioteca? Biblioteca { get; set; }
     }

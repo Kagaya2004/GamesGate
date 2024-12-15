@@ -15,9 +15,6 @@ namespace Services.Validators
             RuleFor(c => c.Comentario)
                 .NotEmpty().WithMessage("Comentário obrigatório.")
                 .NotNull().WithMessage("Comentário obrigatório");
-            RuleFor(c => c.DataComentario)
-                .NotEmpty().WithMessage("Data do Comentário obrigatório.")
-                .NotNull().WithMessage("Data do Comentário obrigatório.");
             RuleFor(c => c.Classificacao)
                 .NotEmpty().WithMessage("Classificação obrigatória.")
                 .NotNull().WithMessage("Classificação obrigatória.");

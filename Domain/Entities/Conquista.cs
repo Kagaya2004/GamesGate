@@ -14,9 +14,8 @@ namespace Domain.Entities
 
         }
 
-        public Conquista(int id, Jogo? jogo, string descricao)
+        public Conquista(int id, Jogo? jogo, string descricao) : base(id)
         {
-            Id = id;
             Jogo = jogo;
             Descricao = descricao;
         }

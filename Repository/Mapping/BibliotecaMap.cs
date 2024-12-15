@@ -11,13 +11,11 @@ namespace Repository.Mapping
 {
     public class BibliotecaMap : IEntityTypeConfiguration<Biblioteca>
     {
-        public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Biblioteca> builder)
+        public void Configure(EntityTypeBuilder<Biblioteca> builder)
         {
-            builder.ToTable("Bibliotecas");
+            builder.ToTable("Biblioteca");
             builder.HasKey(x => x.Id);
-            builder.HasOne(x => x.Usuario)
-                .WithMany()
-                .HasConstraintName("FK_Usuario");
+            builder.HasOne(x => x.Usuario);
             builder.HasMany(x => x.ListaJogos)
                 .WithOne(x => x.Biblioteca)
                 .OnDelete(DeleteBehavior.Cascade);

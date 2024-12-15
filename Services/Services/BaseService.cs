@@ -48,7 +48,7 @@ namespace Service.Services
         public TOutputModel GetById<TOutputModel>(int id, bool tracking = true, IList<string>?
             includes = null) where TOutputModel : class
         {
-            var entity = _baseRepository.Select(tracking, includes);
+            var entity = _baseRepository.Select(id, tracking, includes);
             var outputModel = _mapper.Map<TOutputModel>(entity);
             return outputModel;
         }

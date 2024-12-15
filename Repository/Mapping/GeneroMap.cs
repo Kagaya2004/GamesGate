@@ -8,7 +8,7 @@ namespace Repository.Mapping
     {
         public void Configure(EntityTypeBuilder<Genero> builder)
         {
-            builder.ToTable("Generos");
+            builder.ToTable("Genero");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome)
                 .IsRequired();

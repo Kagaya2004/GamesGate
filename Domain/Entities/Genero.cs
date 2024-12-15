@@ -14,9 +14,8 @@ namespace Domain.Entities
 
         }
 
-        public Genero(int id, string nome)
+        public Genero(int id, string nome) : base(id)
         {
-            Id = id;
             Nome = nome;
         }
 

@@ -14,7 +14,7 @@ namespace Repository.Context
         public DbSet<Avaliacao> Avaliacaos { get; set; }
         public DbSet<Biblioteca> Bibliotecas { get; set; }
         public DbSet<Conquista> Conquistas { get; set; }
-        public DbSet<Desenvolvedora> Desenvolvedores { get; set; }
+        public DbSet<Desenvolvedora> Desenvolvedoras { get; set; }
         public DbSet<Genero> Generos { get; set; }
         public DbSet<Jogo> Jogos { get; set; }
         public DbSet<JogoGenero> JogoGeneros { get; set; }

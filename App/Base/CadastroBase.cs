@@ -64,6 +64,10 @@ namespace App.Base
                 tabControl.SelectedIndex = 0;
                 tabControl.Focus();
             }
+            else
+            {
+                MessageBox.Show(@"Selecione algum registro!", @"GamesGate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         protected virtual void Excluir(int id)

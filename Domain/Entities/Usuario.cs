@@ -1,9 +1,4 @@
 ﻿using Domain.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
@@ -16,10 +11,9 @@ namespace Domain.Entities
 
         public Usuario(int id, string nome, string login,
             string email, string senha, string status,
-            DateTime dataNascimento, DateTime dataCriacao, 
-            DateTime dataLogin, string descricao)
+            DateTime dataNascimento, DateTime dataCriacao,
+            DateTime dataLogin, string descricao) : base(id)
         {
-            Id = id;
             Nome = nome;
             Login = login;
             Email = email;
@@ -36,9 +30,9 @@ namespace Domain.Entities
         public string? Email { get; set; }
         public string? Senha { get; set; }
         public string? Status { get; set; }
-        public DateTime? DataNascimento { get; set; }
-        public DateTime? DataCriacao { get; set; }
-        public DateTime? DataLogin { get; set; }
+        public DateTime DataNascimento { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public DateTime DataLogin { get; set; }
         public string? Descricao { get; set; }
     }
 }

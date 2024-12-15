@@ -14,14 +14,13 @@ namespace Domain.Entities
 
         }
 
-        public JogoGenero(int id, Jogo? jogo, Genero? genero)
+        public JogoGenero(int id, Jogo? jogo, Genero? genero) : base(id)
         {
-            Id = id;
             Jogo = jogo;
             Genero = genero;
         }
 
-        public virtual Genero? Genero { get; set; }
-        public virtual Jogo? Jogo { get; set; }
+        public Genero? Genero { get; set; }
+        public Jogo? Jogo { get; set; }
     }
 }
