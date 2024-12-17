@@ -60,12 +60,12 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(496, 291);
+            btnCancelar.Location = new Point(513, 303);
             btnCancelar.TabIndex = 4;
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(622, 291);
+            btnSalvar.Location = new Point(626, 303);
             btnSalvar.TabIndex = 3;
             // 
             // btnNovo
@@ -146,7 +146,7 @@
             gbJogos.Controls.Add(cbxJogo);
             gbJogos.Location = new Point(16, 86);
             gbJogos.Name = "gbJogos";
-            gbJogos.Size = new Size(712, 196);
+            gbJogos.Size = new Size(712, 208);
             gbJogos.TabIndex = 4;
             gbJogos.TabStop = false;
             gbJogos.Text = "Jogo da Biblioteca";
@@ -156,7 +156,7 @@
             dgvJogos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvJogos.Location = new Point(6, 82);
             dgvJogos.Name = "dgvJogos";
-            dgvJogos.Size = new Size(700, 108);
+            dgvJogos.Size = new Size(700, 120);
             dgvJogos.TabIndex = 8;
             // 
             // btnAdicionar
@@ -167,7 +167,7 @@
             btnAdicionar.HighEmphasis = true;
             btnAdicionar.Icon = null;
             btnAdicionar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnAdicionar.Location = new Point(622, 37);
+            btnAdicionar.Location = new Point(641, 37);
             btnAdicionar.Margin = new Padding(4, 6, 4, 6);
             btnAdicionar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnAdicionar.Name = "btnAdicionar";
@@ -192,7 +192,7 @@
             tbHorasJogadas.HideSelection = true;
             tbHorasJogadas.Hint = "Horas Jogadas";
             tbHorasJogadas.LeadingIcon = null;
-            tbHorasJogadas.Location = new Point(416, 28);
+            tbHorasJogadas.Location = new Point(452, 28);
             tbHorasJogadas.MaxLength = 32767;
             tbHorasJogadas.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             tbHorasJogadas.Name = "tbHorasJogadas";
@@ -230,7 +230,7 @@
             cbxJogo.MaxDropDownItems = 4;
             cbxJogo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cbxJogo.Name = "cbxJogo";
-            cbxJogo.Size = new Size(379, 49);
+            cbxJogo.Size = new Size(434, 49);
             cbxJogo.StartIndex = 0;
             cbxJogo.TabIndex = 0;
             // 
@@ -262,5 +262,6 @@
         private ReaLTaiizor.Controls.MaterialComboBox cbxJogo;
         private ReaLTaiizor.Controls.MaterialButton btnAdicionar;
         private DataGridView dgvJogos;
+        private ReaLTaiizor.Controls.MaterialButton btnLimpar;
     }
 }

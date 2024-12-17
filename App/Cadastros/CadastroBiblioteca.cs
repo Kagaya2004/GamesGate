@@ -116,7 +116,7 @@ namespace App.Cadastros
 
         protected override void CarregaGrid()
         {
-            var includes = new List<string>() {"Usuario"};
+            var includes = new List<string>() { "Usuario" };
             bibliotecas = _bibliotecaService.Get<BibliotecaModel>(false, includes).ToList();
             dgvConsulta.DataSource = bibliotecas;
             dgvConsulta.Columns["IdUsuario"]!.Visible = false;
@@ -183,5 +183,6 @@ namespace App.Cadastros
         }
 
         #endregion
+
     }
 }

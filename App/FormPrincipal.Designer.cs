@@ -46,8 +46,6 @@
             jogoGeneroToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator6 = new ToolStripSeparator();
             usuárioToolStripMenuItem = new ToolStripMenuItem();
-            opçõesToolStripMenuItem = new ToolStripMenuItem();
-            trocarUsuarioToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             lbUsuario = new ToolStripStatusLabel();
             menuStrip1.SuspendLayout();
@@ -56,7 +54,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, opçõesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem });
             menuStrip1.Location = new Point(3, 64);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(794, 24);
@@ -73,107 +71,93 @@
             // avaliaçãoToolStripMenuItem
             // 
             avaliaçãoToolStripMenuItem.Name = "avaliaçãoToolStripMenuItem";
-            avaliaçãoToolStripMenuItem.Size = new Size(158, 22);
+            avaliaçãoToolStripMenuItem.Size = new Size(180, 22);
             avaliaçãoToolStripMenuItem.Text = "Avaliação";
             avaliaçãoToolStripMenuItem.Click += avaliaçãoToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(155, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // bibliotecaToolStripMenuItem
             // 
             bibliotecaToolStripMenuItem.Name = "bibliotecaToolStripMenuItem";
-            bibliotecaToolStripMenuItem.Size = new Size(158, 22);
+            bibliotecaToolStripMenuItem.Size = new Size(180, 22);
             bibliotecaToolStripMenuItem.Text = "Biblioteca";
             bibliotecaToolStripMenuItem.Click += bibliotecaToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(155, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // conquistaToolStripMenuItem
             // 
             conquistaToolStripMenuItem.Name = "conquistaToolStripMenuItem";
-            conquistaToolStripMenuItem.Size = new Size(158, 22);
+            conquistaToolStripMenuItem.Size = new Size(180, 22);
             conquistaToolStripMenuItem.Text = "Conquista";
             conquistaToolStripMenuItem.Click += conquistaToolStripMenuItem_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(155, 6);
+            toolStripSeparator3.Size = new Size(177, 6);
             // 
             // desenvolvedoraToolStripMenuItem
             // 
             desenvolvedoraToolStripMenuItem.Name = "desenvolvedoraToolStripMenuItem";
-            desenvolvedoraToolStripMenuItem.Size = new Size(158, 22);
+            desenvolvedoraToolStripMenuItem.Size = new Size(180, 22);
             desenvolvedoraToolStripMenuItem.Text = "Desenvolvedora";
             desenvolvedoraToolStripMenuItem.Click += desenvolvedoraToolStripMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(155, 6);
+            toolStripSeparator4.Size = new Size(177, 6);
             // 
             // gêneroToolStripMenuItem
             // 
             gêneroToolStripMenuItem.Name = "gêneroToolStripMenuItem";
-            gêneroToolStripMenuItem.Size = new Size(158, 22);
+            gêneroToolStripMenuItem.Size = new Size(180, 22);
             gêneroToolStripMenuItem.Text = "Gênero";
             gêneroToolStripMenuItem.Click += gêneroToolStripMenuItem_Click;
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(155, 6);
+            toolStripSeparator5.Size = new Size(177, 6);
             // 
             // jogoToolStripMenuItem
             // 
             jogoToolStripMenuItem.Name = "jogoToolStripMenuItem";
-            jogoToolStripMenuItem.Size = new Size(158, 22);
+            jogoToolStripMenuItem.Size = new Size(180, 22);
             jogoToolStripMenuItem.Text = "Jogo";
             jogoToolStripMenuItem.Click += jogoToolStripMenuItem_Click;
             // 
             // toolStripSeparator7
             // 
             toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(155, 6);
+            toolStripSeparator7.Size = new Size(177, 6);
             // 
             // jogoGeneroToolStripMenuItem
             // 
             jogoGeneroToolStripMenuItem.Name = "jogoGeneroToolStripMenuItem";
-            jogoGeneroToolStripMenuItem.Size = new Size(158, 22);
+            jogoGeneroToolStripMenuItem.Size = new Size(180, 22);
             jogoGeneroToolStripMenuItem.Text = "JogoGenero";
             jogoGeneroToolStripMenuItem.Click += jogoGeneroToolStripMenuItem_Click;
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(155, 6);
+            toolStripSeparator6.Size = new Size(177, 6);
             // 
             // usuárioToolStripMenuItem
             // 
             usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            usuárioToolStripMenuItem.Size = new Size(158, 22);
+            usuárioToolStripMenuItem.Size = new Size(180, 22);
             usuárioToolStripMenuItem.Text = "Usuário";
             usuárioToolStripMenuItem.Click += usuárioToolStripMenuItem_Click;
-            // 
-            // opçõesToolStripMenuItem
-            // 
-            opçõesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { trocarUsuarioToolStripMenuItem });
-            opçõesToolStripMenuItem.Name = "opçõesToolStripMenuItem";
-            opçõesToolStripMenuItem.Size = new Size(59, 20);
-            opçõesToolStripMenuItem.Text = "Opções";
-            // 
-            // trocarUsuarioToolStripMenuItem
-            // 
-            trocarUsuarioToolStripMenuItem.Name = "trocarUsuarioToolStripMenuItem";
-            trocarUsuarioToolStripMenuItem.Size = new Size(149, 22);
-            trocarUsuarioToolStripMenuItem.Text = "Trocar Usuário";
-            trocarUsuarioToolStripMenuItem.Click += trocarUsuarioToolStripMenuItem_Click;
             // 
             // statusStrip1
             // 
@@ -233,8 +217,6 @@
         private ToolStripMenuItem jogoToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripMenuItem usuárioToolStripMenuItem;
-        private ToolStripMenuItem opçõesToolStripMenuItem;
-        private ToolStripMenuItem trocarUsuarioToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator7;
         private ToolStripMenuItem jogoGeneroToolStripMenuItem;
     }
